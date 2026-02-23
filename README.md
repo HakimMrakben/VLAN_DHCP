@@ -44,35 +44,7 @@ default-router 192.168.30.1
 
 ## 💾 Fichiers inclus
 - `VLAN+Router-on-a-Stick+DHCP.pkt` (Packet Tracer)
-
-
-
-## 🔧 Configuration Switch
-```bash
-vlan 10
-name ADMIN
-vlan 20
-name SALES
-vlan 30
-name IT
-
-interface fa0/1
-switchport mode access
-switchport access vlan 10
-
-interface fa0/2
-switchport mode access
-switchport access vlan 20
-
-interface fa0/3
-switchport mode access
-switchport access vlan 30
-
-interface g0/1
-switchport mode trunk
-
----
-## 🔧 Configuration Router – Router-on-a-Stick + DHCP
+- ## 🔧 Configuration Router – Router-on-a-Stick + DHCP
 ```bash
 interface g0/0.10
 encapsulation dot1Q 10
@@ -100,4 +72,31 @@ default-router 192.168.10.1
 ip dhcp pool SALES
 network 192.168.20.0 255.255.255.0
 default-router 192.168.20.1
+
+
+- ## 🔧 Configuration Switch
+```bash
+vlan 10
+name ADMIN
+vlan 20
+name SALES
+vlan 30
+name IT
+
+interface fa0/1
+switchport mode access
+switchport access vlan 10
+
+interface fa0/2
+switchport mode access
+switchport access vlan 20
+
+interface fa0/3
+switchport mode access
+switchport access vlan 30
+
+interface g0/1
+switchport mode trunk
+
+
 
