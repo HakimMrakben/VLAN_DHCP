@@ -72,6 +72,7 @@ default-router 192.168.10.1
 ip dhcp pool SALES
 network 192.168.20.0 255.255.255.0
 default-router 192.168.20.1
+```
 
 
 - ## 🔧 Configuration Switch
