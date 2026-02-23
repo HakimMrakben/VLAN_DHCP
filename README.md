@@ -71,7 +71,9 @@ switchport access vlan 30
 interface g0/1
 switchport mode trunk
 
+---
 ## 🔧 Configuration Router – Router-on-a-Stick + DHCP
+```bash
 interface g0/0.10
 encapsulation dot1Q 10
 ip address 192.168.10.1 255.255.255.0
