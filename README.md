@@ -15,6 +15,36 @@ Toutes les configurations ont été testées avec succès dans **Packet Tracer**
 - PC3 → VLAN30 (IT)
 - **Trunk** entre switch et router
 - **Ports access** pour les PCs
+- ##✅ Vérifications
+show vlan brief → VLANs actifs
+
+show interfaces trunk → Trunk opérationnel
+
+show ip route → Routes inter-VLAN présentes
+
+show ip dhcp binding → IP distribuées aux PCs
+
+Ping entre PC et gateway de chaque VLAN
+
+Ping inter-VLAN entre tous les PCs
+
+ip dhcp pool IT
+network 192.168.30.0 255.255.255.0
+default-router 192.168.30.1
+
+##capture d'écran
+### 1️⃣ Topologie réseau
+![Topologie réseau](topology.png)
+
+### 2️⃣ Configuration VLAN
+![VLAN Switch](config-switch.png)
+
+### 3️⃣ Configuration Routeur
+![Router Config](config-router.png)
+
+## 💾 Fichiers inclus
+- `VLAN+Router-on-a-Stick+DHCP.pkt` (Packet Tracer)
+
 
 
 ## 🔧 Configuration Switch
@@ -69,32 +99,3 @@ ip dhcp pool SALES
 network 192.168.20.0 255.255.255.0
 default-router 192.168.20.1
 
-##✅ Vérifications
-show vlan brief → VLANs actifs
-
-show interfaces trunk → Trunk opérationnel
-
-show ip route → Routes inter-VLAN présentes
-
-show ip dhcp binding → IP distribuées aux PCs
-
-Ping entre PC et gateway de chaque VLAN
-
-Ping inter-VLAN entre tous les PCs
-
-ip dhcp pool IT
-network 192.168.30.0 255.255.255.0
-default-router 192.168.30.1
-
-##capture d'écran
-### 1️⃣ Topologie réseau
-![Topologie réseau](topology.png)
-
-### 2️⃣ Configuration VLAN
-![VLAN Switch](config-switch.png)
-
-### 3️⃣ Configuration Routeur
-![Router Config](config-router.png)
-
-## 💾 Fichiers inclus
-- `VLAN+Router-on-a-Stick+DHCP.pkt` (Packet Tracer)
